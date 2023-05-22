@@ -9,23 +9,31 @@
   <h1>Calculadora de Áreas</h1>
 
   <h2>Trapezio</h2>
-  Base Menor: <input type="number" id="baseMenor"><br>
-  Base Maior: <input type="number" id="baseMaior"><br>
-  Altura: <input type="number" id="alturaTrapezio"><br>
-  <button onclick="calcularAreas()">Calcular Área do Trapézio</button>
+  <label for="baseMenor">Base Menor:</label>
+  <input type="number" id="baseMenor">
+  <label for="baseMaior">Base Maior:</label>
+  <input type="number" id="baseMaior">
+  <label for="altura">Altura:</label>
+  <input type="number" id="altura">
+  <button onclick="calcularAreaTrapezio()">Calcular</button>
   <p id="resultadoTrapezio"></p>
 
   <h2>Paralelogramo</h2>
-  Base: <input type="number" id="baseParalelogramo"><br>
-  Altura: <input type="number" id="alturaParalelogramo"><br>
-  <button onclick="calcularAreas()">Calcular Área do Paralelogramo</button>
+  <label for="base">Base:</label>
+  <input type="number" id="base">
+  <label for="altura">Altura:</label>
+  <input type="number" id="altura">
+  <button onclick="calcularAreaParalelogramo()">Calcular</button>
   <p id="resultadoParalelogramo"></p>
 
   <h2>Losango</h2>
-  Diagonal Maior: <input type="number" id="diagonalMaiorLosango"><br>
-  Diagonal Menor: <input type="number" id="diagonalMenorLosango"><br>
-  <button onclick="calcularAreas()">Calcular Área do Losango</button>
+  <label for="diagonalMaior">Diagonal Maior:</label>
+  <input type="number" id="diagonalMaior">
+  <label for="diagonalMenor">Diagonal Menor:</label>
+  <input type="number" id="diagonalMenor">
+  <button onclick="calcularAreaLosango()">Calcular</button>
   <p id="resultadoLosango"></p>
+
   <script src="trabalho.js"></script>
 </body>
 </html>
