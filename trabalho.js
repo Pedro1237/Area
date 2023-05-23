@@ -1,55 +1,48 @@
-     function calcularAreaLosango() {
+  $(document).ready(function() {
+  function calcularAreaLosango() {
+    var diagonalMaior = parseFloat($("#diagonalMaior").val());
+    var diagonalMenor = parseFloat($("#diagonalMenor").val());
 
-      var diagonalMaior = parseFloat(document.getElementById("diagonalMaior").value);
+    var area = (diagonalMaior * diagonalMenor) / 2;
 
-      var diagonalMenor = parseFloat(document.getElementById("diagonalMenor").value);
+    console.log("A área do losango é:", area);
 
-      var area = (diagonalMaior * diagonalMenor) / 2;
+    $("#resultadoLosango").text("A área do losango é: " + area);
+  }
 
-      
+  function calcularAreaParalelogramo() {
+    var base = parseFloat($("#base").val());
+    var altura = parseFloat($("#altura").val());
 
-      console.log("A área do losango é:", area);
+    var area = base * altura;
 
-      
+    console.log("A área do paralelogramo é:", area);
 
-      document.getElementById("resultadoLosango").textContent = "A área do losango é: " + area;
+    $("#resultadoParalelogramo").text("A área do paralelogramo é: " + area);
+  }
 
-    }
+  function calcularAreaTrapezio() {
+    var baseMenor = parseFloat($("#baseMenor").val());
+    var baseMaior = parseFloat($("#baseMaior").val());
+    var altura = parseFloat($("#altura").val());
 
-    function calcularAreaParalelogramo() {
+    var area = (baseMenor + baseMaior) / 2 * altura;
 
-      var base = parseFloat(document.getElementById("base").value);
+    console.log("A área do trapézio é:", area);
 
-      var altura = parseFloat(document.getElementById("altura").value);
+    $("#resultadoTrapezio").text("A área do trapézio é: " + area);
+  }
 
-      var area = base * altura;
+  $("#calcularLosango").click(function() {
+    calcularAreaLosango();
+  });
 
-      
+  $("#calcularParalelogramo").click(function() {
+    calcularAreaParalelogramo();
+  });
 
-      console.log("A área do paralelogramo é:", area);
-
-      
-
-      document.getElementById("resultadoParalelogramo").textContent = "A área do paralelogramo é: " + area;
-
-    }
-
-    function calcularAreaTrapezio() {
-
-      var baseMenor = parseFloat(document.getElementById("baseMenor").value);
-
-      var baseMaior = parseFloat(document.getElementById("baseMaior").value);
-
-      var altura = parseFloat(document.getElementById("altura").value);
-
-      var area = (baseMenor + baseMaior) / 2 * altura;
-
-      
-
-      console.log("A área do trapézio é:", area);
-
-      
-
-      document.getElementById("resultadoTrapezio").textContent = "A área do trapézio é: " + area;
-
-    } 
+  $("#calcularTrapezio").click(function() {
+    calcularAreaTrapezio();
+  });
+});
+   
